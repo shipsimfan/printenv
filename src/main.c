@@ -14,16 +14,7 @@ int main(int argc, const char** argv) {
 
     for (int i = 1; i < argc; i++) {
         char* variable = getenv(argv[i]);
-        if (variable != NULL) {
-            while (*variable) {
-                if (*variable == '=') {
-                    variable++;
-                    printf("%s\n", variable);
-                    break;
-                }
-
-                variable++;
-            }
-        }
+        if (variable != NULL)
+            printf("%s\n", variable);
     }
 }
